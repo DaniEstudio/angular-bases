@@ -1,0 +1,17 @@
+<h2>Properties Not in Both Lists</h2>
+<div>
+ <span class="l-blue">{{ countSoap }}</span> from soap
+<span class="blue">{{ countCod }}</span> from code
+</div>
+<br>
+<div *ngIf="propertiesNotInBothLists.length > 0; else noDifferingProperties">
+  <div *ngFor="let property of propertiesNotInBothLists">
+    <p>
+      <span class="bold">{{ property }}</span> from:
+      <span class="bold" [ngClass]="getPropertySource(property) === 'soap' ? 'l-blue' : 'blue'">{{ getPropertySource(property) }}</span>
+    </p>
+  </div>
+</div>
+<ng-template #noDifferingProperties>
+  <p>No properties found that are only in one array.</p>
+</ng-template>

@@ -1,0 +1,20 @@
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.poster {
+  width: 300px;
+  height: 300px;
+  margin: 40px;
+  background-color: black;
+  transition: transform 0.3s ease;
+}
+
+.poster:hover{
+  box-shadow: 0px 1px 8px 3px grey;
+}
+
+.transformed {
+  transform: perspective(500px) rotateY(var(--yRotation)) rotateX(var(--xRotation));
+}
+
