@@ -1,23 +1,22 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { CardEffectComponent } from './others/card-effect/card-effect.component';
 import { CounterModule } from './counter/counter.module';
 import { HeroesModule } from './heroes/heroes.module';
-
-import { AppComponent } from './app.component';
-import { CardEffectComponent } from './others/card-effect/card-effect.component';
-import { ComparisonComponent } from './others/comparison/comparison.component';
+import { VampiresModule } from './vampires/vampires.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardEffectComponent,
-    ComparisonComponent,
+    CardEffectComponent
   ],
   imports: [
     BrowserModule,
     CounterModule,
-    HeroesModule
+    HeroesModule,
+    VampiresModule
   ],
   providers: [],
   bootstrap: [AppComponent]
